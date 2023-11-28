@@ -45,87 +45,89 @@ class _ProductDetailViewState extends State<ProductDetailView> {
         ],
       ),
       // ----------------------App Bar End----------------
-      body: Container(
-        padding: const EdgeInsets.all(20),
-        child: Column(
-          children: [
-            const SizedBox(height: 10),
-            Image.network(
-              "${widget.product.image}",
-              height: 200,
-            ),
-            const SizedBox(height: 10),
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  width: 1,
-                  color: Colors.black12,
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: [
+              const SizedBox(height: 10),
+              Image.network(
+                "${widget.product.image}",
+                height: 200,
+              ),
+              const SizedBox(height: 10),
+              Container(
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    width: 1,
+                    color: Colors.black12,
+                  ),
+                  color: Colors.white,
                 ),
-                color: Colors.white,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "${widget.product.title}",
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
-                  ),
-                  Text("${widget.product.category}",
-                      style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 14)),
-                  const SizedBox(height: 15),
-                  Text("${widget.product.description}"),
-                  const SizedBox(height: 15),
-                  const Row(
-                    children: [
-                      Icon(
-                        Icons.star,
-                        color: Colors.black87,
-                      ),
-                      Icon(
-                        Icons.star,
-                        color: Colors.black87,
-                      ),
-                      Icon(
-                        Icons.star,
-                        color: Colors.black87,
-                      ),
-                      Icon(
-                        Icons.star,
-                        color: Colors.black87,
-                      ),
-                      Icon(
-                        Icons.star_border,
-                        color: Colors.black87,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text("\$${widget.product.price}",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 26)),
-                      const Icon(
-                        Icons.favorite_border,
-                        color: Colors.black87,
-                        size: 26,
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  const Icon(
-                    Icons.shopping_cart_outlined,
-                    color: Colors.black87,
-                    size: 50,
-                  ),
-                ],
-              ),
-            )
-          ],
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "${widget.product.title}",
+                      style: TextStyle(fontWeight: FontWeight.w700, fontSize: 24),
+                    ),
+                    Text("${widget.product.category}",
+                        style:
+                            TextStyle(fontWeight: FontWeight.w700, fontSize: 14)),
+                    const SizedBox(height: 15),
+                    Text("${widget.product.description}"),
+                    const SizedBox(height: 15),
+                    const Row(
+                      children: [
+                        Icon(
+                          Icons.star,
+                          color: Colors.black87,
+                        ),
+                        Icon(
+                          Icons.star,
+                          color: Colors.black87,
+                        ),
+                        Icon(
+                          Icons.star,
+                          color: Colors.black87,
+                        ),
+                        Icon(
+                          Icons.star,
+                          color: Colors.black87,
+                        ),
+                        Icon(
+                          Icons.star_border,
+                          color: Colors.black87,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("\$${widget.product.price}",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w700, fontSize: 26)),
+                        const Icon(
+                          Icons.favorite_border,
+                          color: Colors.black87,
+                          size: 26,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Icon(
+                      Icons.shopping_cart_outlined,
+                      color: Colors.black87,
+                      size: 50,
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

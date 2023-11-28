@@ -89,7 +89,8 @@ class _ProductViewState extends State<ProductView> {
                         onTap: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return ProductDetailView(product:snapshot.data![index]);
+                            return ProductDetailView(
+                                product: snapshot.data![index]);
                           }));
                         },
                         child: Material(
@@ -128,48 +129,6 @@ class _ProductViewState extends State<ProductView> {
                         ),
                       );
                     });
-
-                // return GridView.builder(
-                //   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                //     crossAxisCount: 2,
-                //     crossAxisSpacing: 20,
-                //     mainAxisSpacing: 40,
-                //   ),
-                //   itemCount: 8,
-                //   // itemCount: snapshot.data!.length,
-                //   itemBuilder: (context, index) {
-                //     return Material(
-                //       elevation: 5,
-                //       child: Container(
-                //         height: 200,
-                //         color: Colors.white,
-                //         padding: const EdgeInsets.all(20),
-                //         child: Column(
-                //           crossAxisAlignment: CrossAxisAlignment.start,
-                //           children: [
-                //             Center(
-                //               child: Image.network(
-                //                 "${snapshot.data![index].image}",
-                //                 width: 100,
-                //                 height: 150,
-                //               ),
-                //             ),
-                //             SizedBox(height: 8),
-                //             Text(
-                //               "${snapshot.data![index].title}",
-                //               style: TextStyle(fontWeight: FontWeight.w700),
-                //             ),
-                //             Text("${snapshot.data![index].category}"),
-                //             Text(
-                //               "Available: ${snapshot.data![index].rating?.count ?? 0}",
-                //             ),
-                //             Text("\$${snapshot.data![index].price}",style: TextStyle(fontWeight: FontWeight.w700, fontSize: 18),),
-                //           ],
-                //         ),
-                //       ),
-                //     );
-                //   },
-                // );
               } else {
                 return Text('No data available');
               }
