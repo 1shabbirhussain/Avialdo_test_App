@@ -56,7 +56,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
             ),
             const SizedBox(height: 10),
             Container(
-              padding: const EdgeInsets.all(10),
+              padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(
