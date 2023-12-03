@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:avildo_test/Models/product_post_model.dart';
 import 'package:avildo_test/Screens/product_detail_view.dart';
+import 'package:avildo_test/Screens/product_detail_viewcopy.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:dynamic_height_grid_view/dynamic_height_grid_view.dart';
@@ -89,8 +90,9 @@ class _ProductViewState extends State<ProductView> {
                         onTap: () {
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) {
-                            return ProductDetailView(
-                                product: snapshot.data![index]);
+                            // return ProductDetailView(
+                            //     product: snapshot.data![index]);
+                            return ProductDetailViewPath(id: "${snapshot.data![index].id}");
                           }));
                         },
                         child: Material(

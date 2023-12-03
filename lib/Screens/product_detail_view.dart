@@ -10,6 +10,9 @@ class ProductDetailView extends StatefulWidget {
 }
 
 class _ProductDetailViewState extends State<ProductDetailView> {
+
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,6 +58,7 @@ class _ProductDetailViewState extends State<ProductDetailView> {
                 "${widget.product.image}",
                 height: 200,
               ),
+              
               const SizedBox(height: 10),
               Container(
                 padding: const EdgeInsets.all(20),
